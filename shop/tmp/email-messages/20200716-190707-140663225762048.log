@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHVzZXIxMg==?=
+From: django@geekshop.local
+To: user12@gb.local
+Date: Thu, 16 Jul 2020 19:07:07 -0000
+Message-ID: <159492642739.11139.8341557659893736443@andrew-Inspiron-5584>
+
+Для подтверждения учетной записи user12 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/user12@gb.local/706bb37c9d74f94971a2be5fd8da0b65d6e966ac/
+-------------------------------------------------------------------------------

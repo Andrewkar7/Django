@@ -1,0 +1,48 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/shopping_cart_style.css' %}">
+{% endblock %}
+
+{% block container %}
+    {% include 'mainapp/includes/inc__breadcrumb_center.html' %}
+
+    <section class="cart-container center">
+        <table class="cart-table">
+
+            {% include 'basketapp/includes/inc__basket_list.html' %}
+        </table>
+        <div class="cart-control">
+            <button class="button cart-control__button">Clear Shopping Cart</button>
+            <a href="product.html"><button class="button cart-control__button">Continue Shopping</button></a>
+        </div>
+        <footer class="cart-footer">
+            <form class="cart-footer__adress" action="#">
+                <h2>Shipping Adress</h2>
+                <div class="select cart-footer__select">
+                    <select required>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Moscow">Moscow</option>
+                        <option value="Saint-Petersburg">Saint-Petersburg</option>
+                    </select>
+                    <span class="select__awesome">&#xf0dd;</span>
+                </div>
+                <input class="input__text cart-footer__input" type="text" required placeholder="State">
+                <input class="input__text cart-footer__input" type="text" required placeholder="Postcode / Zip">
+                <input class="button cart-footer__submit" type="submit" value="Get a Quote">
+            </form>
+            <form class="cart-footer__discount" action="#">
+                <h2>Coupon Discount</h2>
+                <p>Enter your coupon code if you have one</p>
+                <input class="input__text cart-footer__input" type="text" required placeholder="State">
+                <input class="button cart-footer__submit" type="submit" value="Apply Coupon">
+            </form>
+            <div class="cart-footer__checkout">
+                    <h4>Sub Total<span>${{ basket.0.total_cost }}</span></h4>
+                    <h2>Grand Total<span>${{ basket.0.total_cost }}</span></h2>
+                <a href="{% url 'main:checkout' %}"><button class="button button__brand-background checkout__button">Proceed to Checkout</button></a>
+            </div>
+        </footer>
+    </section>
+{% endblock %}

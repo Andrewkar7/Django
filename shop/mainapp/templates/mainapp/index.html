@@ -1,0 +1,125 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <section class="slider center" style="background-color: #e8e8e8;">
+        <div class="slider__content">
+            <img class="slider__image" src="{% static 'img/slider.jpg' %}" alt="slider">
+            <div class="slider__text">
+                <h1 class="slider__title">The Brand</h1>
+                <h2 class="slider__slogan">Of Luxerious <span>Fashion</span></h2>
+            </div>
+        </div>
+    </section>
+    <section class="category center">
+        <div class="category__block">
+            <div class="category__item"><a href="{% url 'main:single_page' %}">
+                <div class="category__banner">
+                    <img src="{% static 'img/banners/banner_men.jpg' %}" alt="category for men">
+                </div>
+                <div class="category__text">
+                    <h3>Hot Deal</h3>
+                    <h2>For Men</h2>
+                </div>
+            </a></div>
+            <div class="category__item"><a href="{% url 'main:product' %}">
+                <div class="category__banner">
+                    <img src="{% static 'img/banners/banner_accesories.png' %}" alt="categody accesories">
+                </div>
+                <div class="category__text">
+                    <h3>Luxirous &amp; Trendy</h3>
+                    <h2>Accesories</h2>
+                </div>
+            </a></div>
+        </div>
+        <div class="category__block">
+            <div class="category__item"><a href="{% url 'main:product' %}">
+                <div class="category__banner">
+                    <img src="{% static 'img/banners/banner_women.jpg' %}" alt="category for women">
+                </div>
+                <div class="category__text">
+                    <h3>30% offer</h3>
+                    <h2>Women</h2>
+                </div>
+            </a></div>
+            <div class="category__item"><a href="{% url 'main:product' %}">
+                <div class="category__banner">
+                    <img src="{% static 'img/banners/banner_kids.jpg' %}" alt="category for kids">
+                </div>
+                <div class="category__text">
+                    <h3>New Arrivals</h3>
+                    <h2>For Kids</h2>
+                </div>
+            </a></div>
+        </div>
+    </section>
+    <section class="showcase center">
+        <header class="showcase__header center">
+            <h2 class="showcase__title">Fetured Items</h2>
+            <p class="showcase__text">Shop for items based on what we featured in this week</p>
+        </header>
+        <div class="showcase__conteiner center">
+            {% if showcase__conteiner %}
+                {% for item in showcase__conteiner %}
+                    <div class="product showcase__product">
+                        <a href="/single/page/">
+                            <div class="product__img">
+                                <img src="{% static item.product_img %}" alt="product">
+                            </div>
+                            <div class="product__info">
+                                <h2 class="product__title">Mango People T-shirt</h2>
+                                <div class="product__data">
+                                    <h3 class="product__price">$52.00</h3>
+                                    <p class="product__rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product__add">Add to Cart<img class="product__cart" src="{% static 'img/cart_w.png' %}"
+                                                                         alt="cart"></a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h3>Load files</h3>
+            {% endif %}
+        </div>
+        <footer class="showcase__footer center">
+            <a class="button button__brand-background button__awesome showcase__button" href="{% url 'main:product' %}">Browse All
+                Product<span>&#xf178;</span></a>
+        </footer>
+    </section>
+    <section class="feature center">
+        <div class="feature__banner" style="background-color: #f0f0f0;">
+            <img class="feature__banner-back" src="{% static 'img/banners/banner_back.jpg' %}" alt="banner">
+            <img class="feature__banner-front" src="{% static 'img/banners/banner_front.png' %}" alt="banner">
+            <div class="feature__title">
+                <h2 class="feature__offer">30% <span>Offer</span></h2>
+                <h3 class="feature__for">For Women</h3>
+            </div>
+        </div>
+        <div class="feature__conteiner">
+            {% if feature__boxes %}
+                {% for item in feature__boxes %}
+                    <article class="feature__box">
+                        <div class="feature__icon">
+                            <img src="{% static item.img %}" alt="delivery">
+                        </div>
+                        <div class="feature__text">
+                            <h3>{{ item.title }}</h3>
+                            <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                                models.</p>
+                        </div>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <h3>Load files</h3>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
+

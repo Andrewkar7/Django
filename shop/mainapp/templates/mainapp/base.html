@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block css %}
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/object_style.css' %}">
+    {% endblock %}
+    {% block page_css %}
+        <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+    {% endblock %}
+    {% block js %}
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/basket_scripts.js' %}"></script>
+    {% endblock %}
+    <title>
+        {% block title %}
+            {{ page_title|capfirst }}
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block header %}
+    <header class="header center">
+        <div class="header__block">
+            <a class="logo" href="{% url 'main:index' %}"><img src="{% static 'img/logo.png' %}"
+                                                               alt="logo">Bran<span>d</span></a>
+            <form class="header__form" action="#">
+                <details class="browse">
+                    <summary class="browse__summary">Browse<span>&#xf0dd;</span></summary>
+                    <div class="dropdown browse_dropdown">
+                        <div class="dropdown__flex">
+                            <h2 class="dropdown__title">Women</h2>
+                            <ul>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Dresses</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Tops</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Sweaters/Knits</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Jackets/Coats</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Blazers</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Denim</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Leggings/Pants</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Skirts/Shorts</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Accessories</a></li>
+                            </ul>
+                            <h2 class="dropdown__title">Men</h2>
+                            <ul>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Tees/Tank tops</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Shirts/Polos</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Sweaters</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Sweatshirts/Hoodies</a>
+                                </li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Blazers</a></li>
+                                <li><a href="{% url 'main:product' %}" class="dropdown__link">Jackets/vests</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <input class="search" type="text" required placeholder="Search for Item...">
+                <input class="search__button" type="button" value="&#xf002;">
+            </form>
+        </div>
+        <div class="header__block">
+            <div class="cart">
+                <a href="#"><img src="{% static 'img/cart.png' %}" alt="cart"></a>
+                <div class="dropdown cart_dropdown">
+                    <div class="dropdown__flex">
+                        <div class="cart__item">
+                            <img src="{% static 'img/products/product_cart_001.jpg' %}" alt="product">
+                            <div class="cart__item-info">
+                                <h2 class="cart__item-name">Rebox Zane</h2>
+                                <p class="cart__item-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                </p>
+                                <h3 class="cart__item-price">1 x $250</h3>
+                            </div>
+                            <div class="cart__item-cancel">
+                                    <span>
+                                        <p><i class="fa fa-times-circle" aria-hidden="true"></i></p>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <img src="{% static 'img/products/product_cart_002.jpg' %}" alt="product">
+                            <div class="cart__item-info">
+                                <h2 class="cart__item-name">Rebox Zane</h2>
+                                <p class="cart__item-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                </p>
+                                <h3 class="cart__item-price">1 x $250</h3>
+                            </div>
+                            <div class="cart__item-cancel">
+                                    <span>
+                                        <p><i class="fa fa-times-circle" aria-hidden="true"></i></p>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="cart__total">
+                            <span>Total</span>
+                            <span>$500.00</span>
+                        </div>
+                        <a class="cart__checkout" href="{% url 'main:checkout' %}">Checkout</a>
+                        <a class="cart__goto" href="#">Go to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn__awesome btn__awesome_right header__account" href="#">My account<span>&#xf0da;</span></a>
+        </div>
+    </header>
+    <nav class="navigation center">
+
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+
+    </nav>
+{% endblock %}
+
+{% block container %}
+{% endblock %}
+
+{% block footer %}
+    <section class="subscribe center">
+        <figure class="subscribe__comment">
+            <img src="{% static 'img/photo/id6666.png' %}" alt="photo">
+            <div class="subscribe__message">
+                <p class="subscribe__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                    condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                <h2 class="subscribe__owner">Bin Burhan<br><span>Dhaka, Bd</span></h2>
+                <nav>
+                    <span class="subscribe__switch"></span>
+                    <span class="subscribe__switch subscribe__switch_active"></span>
+                    <span class="subscribe__switch"></span>
+                </nav>
+            </div>
+        </figure>
+        <div class="subscribe__block">
+            <h2 class="subscribe__title">Subscribe</h2>
+            <p class="subscribe__description">For Our Newletter And Promotion</p>
+            <form class="subscribe__form" action="#">
+                <input class="subscribe__input" type="email" required placeholder="Enter Your Email">
+                <input class="subscribe__button" type="button" value="Subscribe">
+            </form>
+        </div>
+    </section>
+    <footer class="footer center">
+        <div>
+            <a class="logo" href="{% url 'main:index' %}"><img src="{% static 'img/logo.png' %}"
+                                                               alt="logo">Bran<span>d</span></a>
+            <p class="footer__about">Objectively transition extensive data rather than cross functional solutions.
+                Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
+                an
+                expanded array of processes and cross-unit partnerships.<br><br>Efficiently plagiarize 24/365 action
+                items
+                and focused infomediaries. Distinctively seize superior initiatives for wireless technologies.
+                Dynamically
+                optimize.</p>
+        </div>
+        <nav>
+            <ul class="footer__menu">
+                <li class="footer__list">
+                    <h2 class="footer__title">Company</h2>
+                    <ul>
+                        <li><a href="{% url 'main:index' %}" class="footer__sublink">Home</a></li>
+                        <li><a href="#" class="footer__sublink">Shop</a></li>
+                        <li><a href="#" class="footer__sublink">About</a></li>
+                        <li><a href="#" class="footer__sublink">How It Works</a></li>
+                        <li><a href="#" class="footer__sublink">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="footer__list">
+                    <h2 class="footer__title">Information</h2>
+                    <ul>
+                        <li><a href="#" class="footer__sublink">Tearms &amp; Condition</a></li>
+                        <li><a href="#" class="footer__sublink">Privacy Policy</a></li>
+                        <li><a href="#" class="footer__sublink">How to Buy</a></li>
+                        <li><a href="#" class="footer__sublink">How to Sell</a></li>
+                        <li><a href="#" class="footer__sublink">Promotion</a></li>
+                    </ul>
+                </li>
+                <li class="footer__list">
+                    <h2 class="footer__title">Shop Category</h2>
+                    <ul>
+                        <li><a href="{% url 'main:product' %}" class="footer__sublink">Men</a></li>
+                        <li><a href="{% url 'main:product' %}" class="footer__sublink">Women</a></li>
+                        <li><a href="{% url 'main:product' %}" class="footer__sublink">Child</a></li>
+                        <li><a href="{% url 'main:product' %}" class="footer__sublink">Apparel</a></li>
+                        <li><a href="{% url 'main:product' %}" class="footer__sublink">Browse All</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <footer class="copyright center">
+        <p class="copyright__text">© {% now "Y" %} Brand All Rights Reserved.</p>
+        <nav class="copyright__social">
+            <ul class="copyright__menu">
+                <li><a href="https://ru-ru.facebook.com/" class="copyright__link" target="_blank"><span><i
+                        class="fa fa-facebook" aria-hidden="true"></i></span></a></li>
+                <li><a href="https://twitter.com/" class="copyright__link copyright__link_red" target="_blank"><span><i
+                        class="fa fa-twitter" aria-hidden="true"></i></span></a></li>
+                <li><a href="https://www.linkedin.cn/" class="copyright__link" target="_blank"><span><i
+                        class="fa fa-linkedin" aria-hidden="true"></i></span></a></span></li>
+                <li><a href="https://www.pinterest.ru/" class="copyright__link" target="_blank"><span><i
+                        class="fa fa-pinterest-p" aria-hidden="true"></i></span></a></li>
+                <li><a href="https://plus.google.com/" class="copyright__link" target="_blank"><span><i
+                        class="fa fa-google-plus" aria-hidden="true"></i></span></a></li>
+            </ul>
+        </nav>
+    </footer>
+{% endblock %}
+</body>
+</html>

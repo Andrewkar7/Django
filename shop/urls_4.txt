@@ -1,0 +1,15 @@
+http://192.168.1.38/product/
+http://192.168.1.38/category/2/products/
+http://192.168.1.38/category/3/products/
+http://192.168.1.38/category/4/products/
+http://192.168.1.38/category/5/products/
+http://192.168.1.38/category/12/products/
+http://192.168.89.135/product/1/
+http://192.168.89.135/product/2/
+http://192.168.89.135/product/3/
+http://192.168.89.135/product/4/
+http://192.168.89.135/product/5/
+http://192.168.89.135/product/6/
+http://192.168.89.135/product/7/
+http://192.168.89.135/product/8/
+http://192.168.89.135/product/9/
