@@ -1,0 +1,45 @@
+<tr>
+    <th class="cart-table__col cart-table__head">Product Details</th>
+    <th class="cart-table__col cart-table__head">Unite Price</th>
+    <th class="cart-table__col cart-table__head">Quantity</th>
+    <th class="cart-table__col cart-table__head">Category</th>
+    <th class="cart-table__col cart-table__head">Subtotal</th>
+    <th class="cart-table__col cart-table__head">Action</th>
+</tr>
+<h2 class="subscribe_title"> Ваша корзина, {{ user.first_name|default:'user'|title }}</h2>
+{% if basket %}
+    {% for item in basket %}
+        <tr>
+            <td class="cart-table__col cart-table__list">
+                <div class="cart-table__product">
+                    <img src="/media/{{ item.product.image }}" alt="Product">
+                    <div class="cart-table__info">
+                        <h2>{{ item.product.name }}</h2>
+                        <h3>Color:<span>Red</span></h3>
+                        <h3>Size:<span>Xll</span></h3>
+                    </div>
+                </div>
+            </td>
+            <td class="cart-table__col cart-table__list">
+                ${{ item.product.price }}
+            </td>
+            <td class="cart-table__col cart-table__list">
+                <input class="input__number cart-table__input" type="number" name="{{ item.pk }}"
+                       min="0" required value="{{ item.quantity }}">
+            </td>
+            <td class="cart-table__col cart-table__list">{{ item.product.category.name }}</td>
+            <td class="cart-table__col cart-table__list">${{ item.product_cost }}</td>
+            <td class="cart-table__col cart-table__list">
+                <div class="cart-table__delete">
+                    <a href="{% url 'basket:delete_product' item.pk %}">
+                        <div class="delete"><span>&#xf057;</span></div>
+                    </a>
+                </div>
+            </td>
+        </tr>
+{% endfor %}
+{% else %}
+    <h4>Корзина пуста</h4>
+{% endif %}
+
+

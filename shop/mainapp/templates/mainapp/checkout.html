@@ -1,0 +1,93 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/checkout_style.css' %}">
+{% endblock %}
+
+{% block container %}
+    {% include 'mainapp/includes/inc__breadcrumb_center.html' %}
+    <section class="checkout-container center">
+        <details class="checkout-details" open>
+            <summary class="checkout-details__summary"><span>01.</span>Shipping Adress</summary>
+            <div class="checkout-details__dropdown">
+                <div class="checkout-details__column">
+                    <h2 class="checkout-details__title">Check as a Guest or Register</h2>
+                    <p class="checkout-details__comment">Register with us for Future Convenience</p>
+                    <form class="checkout-details__shopping" action="#">
+                        <label class="checkout-details__radio">
+                            <input name="owner" type="radio" value="guest" checked>
+                            <span>Checkout as Guest</span>
+                            <span class="checkout-details__radio_on">&#xf192;</span>
+                            <span class="checkout-details__radio_off">&#xf10c;</span>
+                        </label>
+                        <label class="checkout-details__radio">
+                            <input name="owner" type="radio" value="register">
+                            <span>Register</span>
+                            <span class="checkout-details__radio_off">&#xf10c;</span>
+                            <span class="checkout-details__radio_on">&#xf192;</span>
+                        </label>
+                        <h2 class="checkout-details__title checkout-details__title_top15">Register and Save Time!</h2>
+                        <p class="checkout-details__comment">Register with Us for Future Convenience</p>
+                        <label class="checkout-details__checkbox checkout-details__checkbox_top30">
+                            <input type="checkbox">
+                            <span class="checkout-details__checkbox_color">Fast and Easy Checkout</span>
+                        </label>
+                        <label class="checkout-details__checkbox">
+                            <input type="checkbox">
+                            <span class="checkout-details__checkbox_color">Easy Access to Your Order History and Status</span>
+                        </label>
+                        <input class="button checkout-details__submit" type="submit" value="Continue">
+                    </form>
+                </div>
+                <div class="checkout-details__column">
+                    <h2 class="checkout-details__title">Already Registed?</h2>
+                    <p class="checkout-details__comment">Please Log in Below</p>
+                    <form class="checkout-details__registering" action="#">
+                        <h3 class="checkout-details__label">Email Address<span> *</span></h3>
+                        <input class="input__text checkout-details__input" type="email" name="login" required
+                               placeholder="email">
+                        <h3 class="checkout-details__label">Password<span> *</span></h3>
+                        <input class="input__text checkout-details__input" type="password" name="pass" required>
+                        <p class="checkout-details__comment checkout-details__comment_red"><span>* </span>Required Fileds
+                        </p>
+                        <div class="checkout-details__send">
+                            <input class="button checkout-details__submit" type="submit" value="Log in">
+                            <a href="#" class="checkout-details__pass-forgot">Forgot Password ?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </details>
+        <details class="checkout-details">
+            <summary class="checkout-details__summary"><span>02.</span>Billing Information</summary>
+            <div class="checkout-details__dropdown">
+
+            </div>
+        </details>
+        <details class="checkout-details">
+            <summary class="checkout-details__summary"><span>03.</span>Shipping Information</summary>
+            <div class="checkout-details__dropdown">
+
+            </div>
+        </details>
+        <details class="checkout-details">
+            <summary class="checkout-details__summary"><span>04.</span>Shipping Method</summary>
+            <div class="checkout-details__dropdown">
+
+            </div>
+        </details>
+        <details class="checkout-details">
+            <summary class="checkout-details__summary"><span>05.</span>Payment Method</summary>
+            <div class="checkout-details__dropdown">
+
+            </div>
+        </details>
+        <details class="checkout-details">
+            <summary class="checkout-details__summary"><span>06.</span>Order Review</summary>
+            <div class="checkout-details__dropdown">
+
+            </div>
+        </details>
+    </section>
+{% endblock %}

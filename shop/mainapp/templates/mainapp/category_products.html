@@ -1,0 +1,190 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/product_style.css' %}">
+{% endblock %}
+
+{% block container %}
+    {% include 'mainapp/includes/inc__breadcrumb_center.html' %}
+    <section class="showcase center">
+        <nav class="sidebar">
+            <details class="sidebar__category">
+                <summary class="sidebar__summary">Category<span>&#xf0dd;</span></summary>
+                {% include 'mainapp/includes/inc__category_menu.html' %}
+            </details>
+            <details class="sidebar__category">
+                <summary class="sidebar__summary">Brand<span>&#xf0dd;</span></summary>
+                {% include 'mainapp/includes/inc__category_menu.html' %}
+            </details>
+            <details class="sidebar__category">
+                <summary class="sidebar__summary">Designer<span>&#xf0dd;</span></summary>
+                {% include 'mainapp/includes/inc__category_menu.html' %}
+            </details>
+        </nav>
+        <div class="showcase__conteiner">
+            <form class="filter" id="option" action="#">
+                <div class="filter__option">
+                    <div class="filter__box">
+                        <h3 class="filter__title">Trending Now</h3>
+                        <label class="cb-trending">
+                            <input class="cb-trending__check" type="checkbox">
+                            <span class="cb-trending__title">Bohemian</span>
+                        </label>
+                        <span class="filter__separator">|</span>
+                        <label class="cb-trending">
+                            <input class="cb-trending__check" type="checkbox">
+                            <span class="cb-trending__title">Floral</span>
+                        </label>
+                        <span class="filter__separator">|</span>
+                        <label class="cb-trending">
+                            <input class="cb-trending__check" type="checkbox">
+                            <span class="cb-trending__title">Lace</span>
+                        </label>
+                        <div class="filter__break"></div>
+                        <label class="cb-trending">
+                            <input class="cb-trending__check" type="checkbox">
+                            <span class="cb-trending__title">Floral</span>
+                        </label>
+                        <span class="filter__separator">|</span>
+                        <label class="cb-trending">
+                            <input class="cb-trending__check" type="checkbox">
+                            <span class="cb-trending__title">Lace</span>
+                        </label>
+                        <span class="filter__separator">|</span>
+                        <label class="cb-trending">
+                            <input class="cb-trending__check" type="checkbox">
+                            <span class="cb-trending__title">Bohemian</span>
+                        </label>
+                    </div>
+                    <div class="filter__box">
+                        <h3 class="filter__title">Size</h3>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">XXS</span>
+                        </label>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">XS</span>
+                        </label>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">S</span>
+                        </label>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">M</span>
+                        </label>
+                        <div class="filter__break"></div>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">L</span>
+                        </label>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">XL</span>
+                        </label>
+                        <label class="cb-size">
+                            <input class="cb-size__check" type="checkbox">
+                            <span class="cb-size__box"><span>&#xf00c;</span></span>
+                            <span class="cb-size__title">XXL</span>
+                        </label>
+                    </div>
+                    <div class="filter__box">
+                        <h3 class="filter__title">Price</h3>
+                    </div>
+                </div>
+                <div class="filter__sort">
+                    <label class="filter__sort_label" for="sort_by">Sort By</label>
+                    <div class="filter__sort_select filter__sort_select_sortby">
+                        <select id="sort_by">
+                            <option value="name">Name</option>
+                            <option value="date">Date</option>
+                        </select>
+                        <span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                    </div>
+                    <label class="filter__sort_label" for="show">Show</label>
+                    <div class="filter__sort_select filter__sort_select_show">
+                        <select id="show">
+                            <option value="i9">09</option>
+                            <option value="i12">12</option>
+                            <option value="i15">15</option>
+                            <option value="i18">18</option>
+                            <option value="i21">21</option>
+                            <option value="i24">24</option>
+                        </select>
+                        <span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </form>
+            <div class="showcase__content">
+                {% if products %}
+                    {% for product in products %}
+                        <div class="product product_position">
+                        <a href="{% url 'mainapp:product_page' product.pk %}">
+                            <div class="product__img">
+                                <img src="{{ product.image.url }}" alt="product">
+                            </div>
+                            <div class="product__info">
+                                <h2 class="product__title">{{ product.name }}</h2>
+                                <div class="product__data">
+                                    <h3 class="product__price">${{ product.price }}</h3>
+                                    <p class="product__rating">&#xf005;&#xf005;&#xf005;&#xf123;&#xf006;</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{% url 'basket:add_product' product.pk %}" class="product__add">
+                            Add to Cart
+                            <img class="product__cart" src="{% static 'img/cart_w.png' %}"
+                                                                         alt="">
+                        </a>
+                        <a href="#" class="product__refresh"><img src="{% static 'img/refresh_w.png' %}" alt="ref"></a>
+                        <a href="#" class="product__hurt"><img src="{% static 'img/hurt_w.png' %}" alt="hurt"></a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <h3>Load files</h3>
+                {% endif %}
+            </div>
+            <footer class="showcase__footer">
+                <div class="pagination">
+                    <span class="pagination__chevron">
+                    {% if products.has_previous %}
+                        <a href="{% url 'main:category_products_pagination' category.pk products.previous_page_number %}">
+                            &#xf053;
+                        </a>
+                    {% endif %}
+                    </span>
+                    <span class="current">страница {{ products.number }} из {{ products.paginator.num_pages }}</span>
+                    <ul>
+                        <li class="pagination__list pagination__list_active"><a href="#">1</a></li>
+                        <li class="pagination__list"><a href="#">2</a></li>
+                        <li class="pagination__list"><a href="#">3</a></li>
+                        <li class="pagination__list"><a href="#">4</a></li>
+                        <li class="pagination__list"><a href="#">5</a></li>
+                        <li class="pagination__list"><a href="#">6</a></li>
+                        <li class="pagination__list"><a href="#">&hellip;</a></li>
+                        <li class="pagination__list"><a href="#">20</a></li>
+                    </ul>
+                    <span class="pagination__chevron">
+                    {% if products.has_next %}
+                        <a href="{% url 'main:category_products_pagination' category.pk products.next_page_number %}">
+                            &#xf054;
+                        </a>
+                    {% endif %}
+                    </span>
+                </div>
+                <a class="btn showcase__button" href="#">View All</a>
+            </footer>
+        </div>
+    </section>
+    {% include 'mainapp/includes/inc__feature_center.html' %}
+{% endblock %}
+
+

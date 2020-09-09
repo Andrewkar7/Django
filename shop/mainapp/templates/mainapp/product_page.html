@@ -1,0 +1,70 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/single_page_style.css' %}">
+{% endblock %}
+
+{% block container %}
+    {% include 'mainapp/includes/inc__breadcrumb_center.html' %}
+
+    <section class="slider center">
+        <div class="slider__content">
+            <img src="/media/{{ product.image }}" alt="slider">
+        </div>
+    </section>
+    <section class="container">
+        <div class="description">
+            <h2 class="description__title">Men's collection<span></span></h2>
+            <h3 class="description__name">{{ product.name }}</h3>
+            <p class="description__text">Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
+            <div class="description__info">
+                <h4>Material: <span>Cotton</span></h4>
+                <h4>Designer: <span>Binburhan</span></h4>
+            </div>
+            <h3 class="description__price">{{ product.price }}$</h3>
+            <form class="description__filter" action="#">
+                <div class="description__option">
+                    <h3>Choose Color</h3>
+                    <div class="select description__select description__select_square">
+                        <span class="select__square description__square" id="square-color"></span>
+                        <select onchange="document.getElementById('square-color').style.backgroundColor=this.value" required>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                        <span class="select__awesome description__awesome">&#xf107;</span>
+                    </div>
+                </div>
+                <div class="description__option">
+                    <h3>Choose Size</h3>
+                    <div class="select description__select">
+                        <select required>
+                            <option value="XXS">XXS</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                        <span class="select__awesome description__awesome">&#xf107;</span>
+                    </div>
+                </div>
+                <div class="description__option">
+                    <h3>Quantity</h3>
+                    <input class="input__number description__number" type="number" required value="2">
+                </div>
+                <div class="button button__brand-border description__submit">
+                    <a href="{% url 'basket:add_product' product.pk %}">Add to Cart
+                    <input type="submit" action="" value="">
+                    <div class="icon-cart description__submit_icon-cart"></div><a/>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+

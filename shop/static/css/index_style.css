@@ -1,0 +1,242 @@
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.slider__content {
+  width: 1140px;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+}
+.slider__image {
+  height: 665px;
+  margin-top: -51px;
+}
+.slider__text {
+  border-left: 12px solid #f16d7f;
+  top: 225px;
+  left: 0;
+  position: absolute;
+}
+.slider__title {
+  color: #222;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 45px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-left: 12px;
+}
+.slider__slogan {
+  color: #222;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 31px;
+  text-transform: uppercase;
+  margin-left: 12px;
+}
+.slider__slogan span {
+  color: #f16d7f;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 96px;
+}
+.category__block {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.category__item {
+  transition: 0.2s linear;
+  width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+.category__item:hover {
+  transform: scale(1.03, 1.03);
+  box-shadow: 0 3px 6px gray;
+}
+.category__item:active {
+  transition: 0.05s linear;
+  transform: none;
+  box-shadow: none;
+}
+.category__banner {
+  width: 562px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category__text {
+  height: 82px;
+  background-color: white;
+  top: 26px;
+  left: 0;
+  position: absolute;
+  padding: 19px 16px;
+}
+.category__text h3 {
+  color: #222;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.category__text h2 {
+  color: #f16d7f;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+.showcase__header {
+  padding-top: 5px;
+  padding-bottom: 55px;
+}
+.showcase__title {
+  color: #222;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+.showcase__text {
+  width: 800px;
+  color: #9f9f9f;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+.showcase__conteiner {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.showcase__product {
+  margin-bottom: 40px;
+}
+.showcase__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+.showcase__button {
+  width: 212px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.feature {
+  height: 529px;
+  background-color: #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 56px;
+  margin-bottom: 97px;
+}
+.feature__banner {
+  width: 767px;
+  position: relative;
+}
+.feature__banner-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.feature__banner-front {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.feature__title {
+  width: 350px;
+  top: 132px;
+  left: 39px;
+  position: absolute;
+}
+.feature__offer {
+  color: white;
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.feature__offer span {
+  color: #f16d7f;
+}
+.feature__for {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: -3px;
+}
+.feature__conteiner {
+  height: 529px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 48px 37px;
+}
+.feature__box {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.feature__icon {
+  width: 50px;
+  height: 50px;
+}
+.feature__text {
+  width: 236px;
+}
+.feature__text h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.feature__text p {
+  min-height: 94px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+}
+
+/*# sourceMappingURL=index_style.css.map */

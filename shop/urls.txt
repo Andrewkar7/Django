@@ -1,0 +1,13 @@
+http://192.168.1.38/
+http://192.168.1.38/product/
+http://192.168.1.38/checkout/
+http://192.168.1.38/category/5/products/
+http://192.168.1.38/category/2/products/
+http://192.168.1.38/category/3/products/
+http://192.168.1.38/category/4/products/
+http://192.168.1.38/category/12/products/
+http://192.168.1.38/basket/
+http://192.168.1.38/orders/
+http://192.168.1.38/auth/update/
+http://192.168.1.38/orders/order/update/8/
+http://192.168.1.38/orders/order/update/7/

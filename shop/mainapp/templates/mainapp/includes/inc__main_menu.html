@@ -1,0 +1,347 @@
+{% load static %}
+
+<ul class="menu">
+    <li class="menu__list"><a href="{% url 'main:index' %}" class="menu__link">Home</a></li>
+    <li class="menu__list">
+        <a href="{% url 'main:product' %}" class="menu__link">Men</a>
+        <div class="dropdown megamenu">
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Men</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                    <li><a href="#" class="dropdown__link">Shoes</a></li>
+                    <li><a href="#" class="dropdown__link">Beauty</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Men</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <h3 class="dropdown__title">Men</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Women</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <a href="#" class="dropdown__supersale">
+                    <img src="{% static 'img/banners/banner_megamenu.jpg' %}" alt="sale">
+                    <span>Super Sale!</span>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="menu__list">
+        <a href="{% url 'main:product' %}" class="menu__link">Women</a>
+        <div class="dropdown megamenu">
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Women</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                    <li><a href="#" class="dropdown__link">Shoes</a></li>
+                    <li><a href="#" class="dropdown__link">Beauty</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Women</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <h3 class="dropdown__title">Women</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Women</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <a href="#" class="dropdown__supersale">
+                    <img src="{% static 'img/banners/banner_megamenu.jpg' %}" alt="sale">
+                    <span>Super Sale!</span>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="menu__list">
+        <a href="{% url 'main:product' %}" class="menu__link">Kids</a>
+        <div class="dropdown megamenu">
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Kids</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                    <li><a href="#" class="dropdown__link">Shoes</a></li>
+                    <li><a href="#" class="dropdown__link">Beauty</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Kids</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <h3 class="dropdown__title">Kids</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li class="menu__list">
+        <a href="{% url 'main:product' %}" class="menu__link">Accoseriese</a>
+        <div class="dropdown dropdown_right megamenu">
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Accoseriese</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                    <li><a href="#" class="dropdown__link">Shoes</a></li>
+                    <li><a href="#" class="dropdown__link">Beauty</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Accoseriese</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <h3 class="dropdown__title">Accoseriese</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li class="menu__list">
+        <a href="{% url 'main:product' %}" class="menu__link">Featured</a>
+        <div class="dropdown dropdown_right megamenu">
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Featured</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                    <li><a href="#" class="dropdown__link">Shoes</a></li>
+                    <li><a href="#" class="dropdown__link">Beauty</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Featured</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <h3 class="dropdown__title">Featured</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li class="menu__list">
+        <a href="{% url 'main:product' %}" class="menu__link">Hot Deals</a>
+        <div class="dropdown dropdown_right megamenu">
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Hot Deals</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                    <li><a href="#" class="dropdown__link">Shoes</a></li>
+                    <li><a href="#" class="dropdown__link">Beauty</a></li>
+                </ul>
+            </div>
+            <div class="dropdown__flex">
+                <h3 class="dropdown__title">Hot Deals</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Dresses</a></li>
+                    <li><a href="#" class="dropdown__link">Tops</a></li>
+                    <li><a href="#" class="dropdown__link">Sweaters/Knits</a></li>
+                    <li><a href="#" class="dropdown__link">Jackets/Coats</a></li>
+                    <li><a href="#" class="dropdown__link">Blazers</a></li>
+                    <li><a href="#" class="dropdown__link">Denim</a></li>
+                    <li><a href="#" class="dropdown__link">Leggings/Pants</a></li>
+                </ul>
+                <h3 class="dropdown__title">Hot Deals</h3>
+                <ul>
+                    <li><a href="#" class="dropdown__link">Skirts/Shorts</a></li>
+                    <li><a href="#" class="dropdown__link">Accessories</a></li>
+                    <li><a href="#" class="dropdown__link">Bags/Purses</a></li>
+                    <li><a href="#" class="dropdown__link">Swimwear/Underwear</a></li>
+                    <li><a href="#" class="dropdown__link">Nightwear</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    {% if user.is_authenticated %}
+        <li class="menu__list">
+            <a href="{% url 'main:product' %}" class="menu__link">
+                {{ user.first_name|default:'User'|title }}
+            </a>
+            <div class="dropdown dropdown_right megamenu">
+                <div class="dropdown__flex">
+                    <h3 class="dropdown__title">
+                        {{ user.first_name|default:'User'|title }}
+                    </h3>
+                    <ul>
+                        <li><a href="{% url 'auth:update' %}" class="dropdown__link">Profile</a></li>
+                        <li><a href="{% url 'ordersapp:index' %}" class="dropdown__link">Orders</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </li>
+    {% endif %}
+    {% if user.is_superuser %}
+        <li>
+            <a href="{% url 'my_admin:index' %}" class="menu__link">
+                админка
+            </a>
+        </li>
+    {% endif %}
+    <li>
+        {% if user.is_authenticated %}
+            <a href="{% url 'auth:logout' %}" class="menu__link">
+                Log out
+            </a>
+        {% else %}
+            <a href="{% url 'auth:login' %}" class="menu__link">
+                Log in
+            </a>
+        {% endif %}
+    </li>
+    <a href="{% url 'basket:index' %}" class="basket">
+
+        <span>
+            {% if basket %}
+                <span class="menu__link">{{ basket.0.total_cost|floatformat:0 }} $
+                ({{ basket.0.total_quantity }} шт)</span>
+            {% endif %}
+        </span>
+    </a>
+</ul>

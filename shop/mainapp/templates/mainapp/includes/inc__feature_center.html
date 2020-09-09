@@ -1,0 +1,21 @@
+{% load static %}
+
+<section class="feature center">
+    {% if feature__boxes %}
+        {% for item in feature__boxes %}
+            <article class="feature__box">
+                <div class="feature__icon">
+                    <img src="{% static item.img %}" alt="delivery">
+                </div>
+                <div class="feature__info">
+                    <h3>{{ item.title }}</h3>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </div>
+            </article>
+        {% endfor %}
+    {% else %}
+        <h3>Load files</h3>
+    {% endif %}
+
+</section>
